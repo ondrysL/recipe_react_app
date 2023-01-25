@@ -1,0 +1,63 @@
+.main__container{
+    padding: 2rem 0rem;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3rem;
+}
+
+.main__header__container{
+    z-index: 2;
+}
+
+.main__header{
+    margin: 0;
+    margin-left: 3rem;
+    text-align: left;
+    font-size: 4rem;
+    color: white;
+}
+
+.main__span{
+    color: #2C5364;
+}
+
+.main__img{
+    z-index: 2;
+    width: 530px;
+    border-radius: 0% 50% 0% 0%;
+}
+
+.main__find{
+    z-index: 2;
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+    transition: all .8s;
+}
+
+.main__find:hover{
+    margin-left: 30px;
+    transition: all .8s;
+    cursor: pointer;
+}
+
+.main__arrow{
+    color: #2C5364;
+    margin-left: 3rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.circle{
+    z-index: 1;
+    width: 100vw;
+    height: 700px;
+    position: absolute;
+    left: 0;
+    top: 22%;
+    border-radius: 0% 50% 0% 0%;
+    background-color: white;
+}

@@ -2,34 +2,34 @@ import { motion } from 'framer-motion';
 import './App.css';
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
-import cook from './img/cook.jpg'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { green, red } from '@mui/material/colors';
+import Main from './components/Main';
+import CategoryList from './components/CategoryList';
+import { useEffect, useState } from 'react';
 
 function App() {  
-  return <div>
-    <section className='idk'>
-      <motion.div animate={{opacity:1}} initial={{opacity:0}} transition={{duration: .6}}>
-        <Navbar></Navbar>
-      </motion.div>
-      <section className='main__container'>
-        <motion.div className='main__header__container' animate={{x:0}} initial={{x:-450}} transition={{duration: .6}}>
-          <h1 className='main__header'>Best way to <span className='main__span'>cook!</span></h1>
-        </motion.div>
-        <motion.img animate={{opacity:1}} initial={{opacity:0}} transition={{duration: 2}} src={cook} alt="" className='main__img'/>
-        <motion.div className='main__find' animate={{x:0}} initial={{x:-450}} transition={{duration: .6}}>
-          <a href='#eat'>
-            <p className='main__arrow'>Find new recipe</p>
-          </a>
-          <ArrowForwardIcon sx={{fontSize:40, color: '#2C5364'}}></ArrowForwardIcon>
-        </motion.div>
-        <div className='circle'></div>
-      </section>
+  const [recipes, setRecipes] = useState([])
+  const [name, setName] = useState("spaghetti")
+  const [load, setLoad] = useState(false)
+
+  const urlByName = `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
+
+  useEffect(() => {
+      fetch(urlByName)
+      .then (res => res.json())
+      .then(data => {
+          setRecipes(data['meals'].slice(0,3))
+          setLoad(false)
+      })
+  }, [name])
+
+  return <div className='background'>
+      <Navbar/>
+      <Main/>
       <section id='eat'>
-        <Slider></Slider>
+        <Slider recipes={recipes} changeName={name=>setName(name)} name={name}/>
       </section>
-    </section>
-  </div>
+      <CategoryList/>
+    </div>
 }
 
 export default App;

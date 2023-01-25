@@ -4,8 +4,9 @@ import { motion } from 'framer-motion'
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Recipe from './Recipe';
+import breakfest from '../img/pic2.svg'
 
-const Slider = () => {
+const Slider = (props) => {
     const [recipes, setRecipes] = useState([])
     const [load, setLoad] = useState(true)
     const [query, setQuery] = useState("spaghetti")
@@ -34,7 +35,9 @@ const Slider = () => {
             <form>
                 <input className='eat__input' value={query} onChange={e => setQuery(e.target.value)}></input>
             </form>
-          <SearchIcon className='search__icon' sx={{fontSize:50, color: '#2C5364'}}></SearchIcon>
+            <a href='#meal'>
+                <SearchIcon className='search__icon' sx={{fontSize:50, color: '#2C5364'}}></SearchIcon>
+            </a>
         </div>
         <motion.div className='slider'>
             {recipes.map((recipe, index) => {

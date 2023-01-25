@@ -1,5 +1,6 @@
 .eat__container{
     padding: 1.4rem 0rem;
+    position: relative;
 }
 
 .slider{
@@ -83,6 +84,7 @@
 .recipe__title{
     font-size: 1.4rem;
     color: white;
+    z-index: 2;
 }
 
 .circle_3{

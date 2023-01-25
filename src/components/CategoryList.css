@@ -1,0 +1,39 @@
+.category__container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+}
+
+.category__title{
+    margin-left: 2rem;
+    font-size: 2.1rem;
+    color: white;
+}
+
+.category__list{
+    padding: 0rem 2rem;
+    display: flex;
+    column-gap: 2.4rem;
+    row-gap: .8rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+.category__one{
+    list-style: none;
+    color: #203A43;
+    font-weight: 700;
+    background-color: white;
+    padding: .4rem 1rem;
+    border-radius: 15px;
+    transition: all .8s;
+}
+
+.category__one:hover{
+    cursor: pointer;
+    background-color: #203A43;
+    color: white;
+    transition: all .8s;
+}
