@@ -1,0 +1,101 @@
+.eat__container{
+    padding: 1.4rem 0rem;
+}
+
+.slider{
+    padding: 0rem 2rem;
+    z-index: 2;
+    margin-top: 10rem;
+    /*maybe delete*/
+    height: auto;
+}
+
+.loading{
+    z-index: 2;
+}
+
+.eat__title{
+    margin-left: 2rem;
+    font-size: 2.1rem;
+    color: white;
+}
+
+.eat__input{
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    border-bottom: 1px solid black;
+    text-transform: capitalize;
+}
+
+.eat__input:focus{
+    outline: none;
+}
+
+.search__icon{
+    transition: all .8s;
+}
+
+.search__icon:hover{
+    transition: all .8s;
+    transform: scale(1.2);
+}
+
+.circle_2{
+    border-radius: 0px 100px 200px 0px;
+    height: 20vh;
+    width: 70vw;
+    background-color: white;
+
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 3rem;
+    padding: 3rem 3rem;
+}
+
+.recipe__container{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe__img{
+    z-index: 2;
+    width: 330px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+
+.recipe__down{
+    width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+
+.recipe__title{
+    font-size: 1.4rem;
+    color: white;
+}
+
+.circle_3{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 46vh;
+    width: 75vw;
+    border-radius: 75% 0% 0% 0%;
+    background-color: white;
+}
+
+.category__container{
+    position: relative;
+}
