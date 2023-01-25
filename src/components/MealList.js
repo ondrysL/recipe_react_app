@@ -13,7 +13,7 @@ const MealList = (props) => {
                     <img src={strMealThumb} alt="" className='meal__list__img'/>
                     <div className='meal__list__down__part'>
                         <h1 className='meal__list__title'>{strMeal}</h1>
-                        <motion.a href='#meal' animate={{y:[0, 10, 0]}} transition={{ease:"linear" ,duration:2, repeat:Infinity}}>
+                        <motion.a onClick={()=>props.changeRecipe(meal)} href='#meal' animate={{y:[0, 10, 0]}} transition={{ease:"linear" ,duration:2, repeat:Infinity}}>
                             <KeyboardArrowDownIcon sx={{fontSize:70, color:'white'}}></KeyboardArrowDownIcon>
                         </motion.a>
                     </div>

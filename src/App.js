@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 function App() {  
   const [recipes, setRecipes] = useState([])
   const [name, setName] = useState("spaghetti")
-  const [load, setLoad] = useState(false)
+  const [load, setLoad] = useState(true)
 
   const urlByName = `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
 
@@ -26,7 +26,7 @@ function App() {
       <Navbar/>
       <Main/>
       <section id='eat'>
-        <Slider recipes={recipes} changeName={name=>setName(name)} name={name}/>
+        <Slider load={load} recipes={recipes} changeName={name=>setName(name)} name={name}/>{console.log(name)}
       </section>
       <CategoryList/>
     </div>
