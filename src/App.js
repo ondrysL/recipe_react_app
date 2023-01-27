@@ -5,13 +5,19 @@ import Slider from './components/Slider';
 import Main from './components/Main';
 import CategoryList from './components/CategoryList';
 import { useEffect, useState } from 'react';
+import Footer from './components/Footer';
 
 function App() {  
+  const [currentRecipe, setCurrentRecipe] = useState()
   const [recipes, setRecipes] = useState([])
   const [name, setName] = useState("spaghetti")
   const [load, setLoad] = useState(true)
 
   const urlByName = `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
+
+  useEffect(()=>{
+    console.log(window.innerWidth);
+  })
 
   useEffect(() => {
       fetch(urlByName)
@@ -26,9 +32,10 @@ function App() {
       <Navbar/>
       <Main/>
       <section id='eat'>
-        <Slider load={load} recipes={recipes} changeName={name=>setName(name)} name={name}/>{console.log(name)}
+        <Slider load={load} recipes={recipes} changeName={name=>setName(name)} name={name}/>
       </section>
-      <CategoryList/>
+      <CategoryList changeCurrentName={name=>setName(name)}/>
+      <Footer></Footer>
     </div>
 }
 

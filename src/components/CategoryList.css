@@ -37,3 +37,20 @@
     color: white;
     transition: all .8s;
 }
+
+.circle_7{
+    position: absolute;
+    right: 0;
+    top: 34%;
+    z-index: 1;
+    height: 60vh;
+    width: 25vw;
+    border-radius: 200px 0px 0px 200px;
+    background-color: #203A43;
+}
+
+@media screen and (min-width: 624px) {
+    .category__title{
+        font-size: 2.5rem;
+    }
+}

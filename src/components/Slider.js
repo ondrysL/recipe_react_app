@@ -6,9 +6,14 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Recipe from './Recipe';
 import breakfest from '../img/pic2.svg'
 import MealList from './MealList';
+import CategoryList from './CategoryList';
 
 const Slider = (props) => {
     const [currentRecipe, setCurrentRecipe] = useState()
+
+    const handleName = (name) => {
+        props.changeName(name)
+    }
 
     if(props.load){
         return <div className='loading'>

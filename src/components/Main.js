@@ -1,5 +1,5 @@
 import './Main.css'
-import cook from '../img/cook.png'
+import cook from '../img/cook.svg'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { green, red } from '@mui/material/colors';
 import { motion } from 'framer-motion';

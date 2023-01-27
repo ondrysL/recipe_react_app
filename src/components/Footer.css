@@ -1,0 +1,36 @@
+.footer__container{
+    margin-top: 5rem;
+    margin-left: 2rem;
+    border-top: 2px solid white;
+}
+
+.footer__title{
+    color: white;
+    font-size: 2rem;
+}
+
+.footer__box{
+    margin: 0;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1rem;
+}
+
+.footer__box li{
+    color: white;
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer__box a{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.footer__box a{
+}

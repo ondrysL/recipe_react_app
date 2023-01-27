@@ -17,6 +17,7 @@
 }
 
 .meal__list__down__part{
+    z-index: 2;
     width: 330px;
     display: flex;
     align-items: center;
@@ -37,4 +38,12 @@
     object-fit: cover;
     object-position: center;
     border-radius: 25px;
+}
+
+@media screen and (min-width:624px) {
+    .meal__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
