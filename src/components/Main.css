@@ -71,7 +71,7 @@
     .circle{
         top: 25%;
         width: 80vw;
-        border-radius: 0% 50% 20% 0%;
+        border-radius: 0% 40% 20% 0%;
     }
 
     .main__header{
@@ -90,5 +90,41 @@
     .main__find{
         align-self: center;
         margin-right: 11rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .main__container{
+        row-gap: 2rem;
+    }
+    .main__header{
+        font-size: 6rem;
+        text-align: left;
+        width: 600px;
+    }
+    .main__img{
+        margin-top: -2rem;
+        max-width: 550px;
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    .circle{
+        width: 70vw;
+        border-radius: 0% 30% 20% 0%;
+    }
+    .main__img{
+        margin-right: 15rem;
+    }
+}
+
+@media screen and (min-width:1600px) {
+    .circle{
+        width: 65vw;
+        border-radius: 0% 40% 0% 0%;
+    }
+    .main__img{
+        margin-right: 30rem;
     }
 }

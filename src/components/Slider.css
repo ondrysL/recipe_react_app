@@ -6,7 +6,6 @@
 }
 
 .slider{
-    padding: 0rem 2rem;
     z-index: 2;
     margin-top: 10rem;
     /*maybe delete*/
@@ -80,5 +79,17 @@
     }
     .circle_2{
         column-gap: 6rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .eat__title{
+        font-size: 3rem;
+    }   
+}
+
+@media screen and (min-width:1200px) {
+    .circle_2{
+        border-radius: 0px 120px 180px 0px;
     }
 }

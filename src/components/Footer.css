@@ -1,11 +1,13 @@
 .footer__container{
-    margin-top: 5rem;
-    margin-left: 2rem;
-    border-top: 2px solid white;
+    background-color: white;
+    margin-top: 10rem;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    border-radius: 120px 120px 0px 0px;
 }
 
 .footer__title{
-    color: white;
+    color: #203A43;
     font-size: 2rem;
 }
 
@@ -16,21 +18,42 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    row-gap: 1rem;
+    row-gap: .5rem;
 }
 
 .footer__box li{
-    color: white;
+    color: #203A43;
     list-style: none;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .footer__box a{
     display: flex;
     align-items: center;
     column-gap: 2rem;
+    padding: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: all .8s;
 }
 
-.footer__box a{
+.footer__box a:hover{
+    transition: all .8s;
+    border-bottom: 2px solid #203A43;
+}
+
+@media screen and (min-width: 624px) {
+    .footer__title{
+        font-size: 2.5rem;
+    }
+    .footer__box{
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .footer__box{
+        align-items: flex-start;
+        margin-left: 5rem;
+    }
 }

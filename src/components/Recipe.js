@@ -8,8 +8,10 @@ const Recipe = (props) => {
             <p className="meal__category">{strCategory}</p>
             <p className="meal__area">{strArea}</p>
         </div>
-        <img className="meal__img" src={strMealThumb} alt="" />
-        <p className="meal__instructions">{strInstructions}</p>
+        <div className="meal__box__2">
+            <img className="meal__img" src={strMealThumb} alt="" />
+            <p className="meal__instructions">{strInstructions}</p>
+        </div>
         <p className="meal__tags">{strTags}</p>
         <div className='circle_4'></div>
         <div className='circle_5'></div>

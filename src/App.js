@@ -34,7 +34,10 @@ function App() {
       <section id='eat'>
         <Slider load={load} recipes={recipes} changeName={name=>setName(name)} name={name}/>
       </section>
-      <CategoryList changeCurrentName={name=>setName(name)}/>
+      <CategoryList changeCurrentName={(test)=>{
+        setName(test)
+        console.log(name)
+      }}/>
       <Footer></Footer>
     </div>
 }

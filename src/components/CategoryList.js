@@ -7,6 +7,7 @@ const CategoryList = (props) => {
     const [mealList, setMealList] = useState(null)
     const [load, setLoading] = useState(true)
     const [category, setCategory] = useState("Beef")
+    const [test, setTest] = useState()
 
     const url = `https://www.themealdb.com/api/json/v1/1/categories.php`
     const urlCategory = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
@@ -36,6 +37,7 @@ const CategoryList = (props) => {
 
     return <div className='category__container'>
         <div className="circle_7"></div>
+        <div className="circle_8"></div>
         <h1 className='category__title'>Find by category</h1>
         <ul className='category__list'>
             {

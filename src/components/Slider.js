@@ -24,9 +24,9 @@ const Slider = (props) => {
     return <div className='eat__container'>
         <h1 className='eat__title'>What you want to cook?</h1>
         <div className='circle_2'>
-            <form>
+            
                 <input className='eat__input' value={props.name} onChange={e => props.changeName(e.target.value)}></input>
-            </form>
+            
             <a href='#meal'>
                 <SearchIcon className='search__icon' sx={{fontSize:50, color: '#2C5364'}}></SearchIcon>
             </a>
